@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Cadastro</title>
+  </head>
+
+  <body>
+
+  <div class="text-center fs-1">Cadastro Cliente</div><br><br>
+
+  <div class="container">
+    <form class="row g-3">
+  <div class="col-md-6">
+    <label for="inputNome" class="form-label">Nome</label>
+    <input type="nome" class="form-control" id="inputNome" required>
+  </div>
+  <div class="col-md-3">
+    <label for="inputEndereco" class="form-label" >Endereço</label>
+    <input type="endereco" class="form-control" id="inputEndereco" required>
+  </div>
+  <div class="col-md-3">
+    <label for="inputBairro" class="form-label">Bairro</label>
+    <input type="text" class="form-control" id="inputBairro" required>
+  </div>
+  <div class="col-md-4">
+    <label for="inputCidade" class="form-label">Cidade</label>
+    <select id="inputCidade" class="form-select" required>
+    <option value="">Selecione</option>
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espirito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+</select>
+  </div>
+  <div class="col-md-3">
+    <label for="inputContato" class="form-label">Contato</label>
+    <input type="text" class="form-control" id="inputContato" required>
+  </div><br><br><br><br>
+
+  <div class="text-left fs-1">Veículo</div>
+
+  <div class="col-3">
+    <label for="inputMarca" class="form-label">Marca</label>
+    <input type="text" class="form-control" id="inputMarca" placeholder="Corsa" required>
+  </div>
+  <div class="col-md-3">
+    <label for="inputModelo" class="form-label">Modelo</label>
+    <input type="text" class="form-control" id="inputModelo" required>
+  </div>
+  <div class="col-md-2">
+    <label for="inputCor" class="form-label">Cor</label>
+    <select id="inputCor" class="form-select" required>
+      <option value="">Selecione</option>
+      <option value="Branco">Branco</option>
+      <option value="Cinza">Cinza</option>
+      <option value="Preto">Preto</option>
+      <option value="Prata">Prata</option>
+      <option value="Azul">Azul</option>
+      <option value="Vermelho">Vermelho</option>
+      <option value="Marrom/Bege">Marrom/Bege</option>
+      <option value="Verde">Verde</option>
+      <option value="Amarelo">Amarelo</option>
+      <option value="Outros">Outros</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputPlaca" class="form-label">Placa</label>
+    <input type="text" class="form-control" id="inputPlaca" required>
+  </div>
+  <div class="col-12">
+  </div><br><br>
+
+  <div class="text-center fs-1">Produtos</div><br><br>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+    <label for="inputItem" class="form-label">Item</label>
+    <input type="item" class="form-control" id="inputItem">
+    </div>
+    <div class="col-sm-2">
+    <label for="inputQuant" class="form-label">Quantidade</label>
+    <input type="quant" class="form-control" id="inputQuant">
+    </div>
+    <div class="col-sm-2">
+    <label for="inputValor" class="form-label">Valor</label>
+    <input type="valor" class="form-control" id="inputValor" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-8">
+    <input type="item2" class="form-control" id="inputItem2">
+    </div>
+    <div class="col-sm-2">
+    <input type="quant2" class="form-control" id="inputQuant2">
+    </div>
+    <div class="col-sm-2">
+    <input type="valor2" class="form-control" id="inputValor2" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+	<div class="col-sm-8">
+    <input type="item3" class="form-control" id="inputItem3">
+    </div>
+    <div class="col-sm-2">
+    <input type="quant3" class="form-control" id="inputQuant3">
+    </div>
+    <div class="col-sm-2">
+    <input type="valor3" class="form-control" id="inputValor3" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+	<div class="col-sm-8">
+    <input type="item4" class="form-control" id="inputItem4">
+    </div>
+    <div class="col-sm-2">
+    <input type="quant4" class="form-control" id="inputQuant4">
+    </div>
+    <div class="col-sm-2">
+    <input type="valor4" class="form-control" id="inputValor4" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+	<div class="col-sm-8">
+    <input type="item5" class="form-control" id="inputItem5">
+    </div>
+    <div class="col-sm-2">
+    <input type="quant5" class="form-control" id="inputQuant5">
+    </div>
+    <div class="col-sm-2">
+    <input type="valor5" class="form-control" id="inputValor5" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+	<div class="col-sm-8">
+    <input type="item6" class="form-control" id="inputItem6">
+    </div>
+    <div class="col-sm-2">
+    <input type="quant6" class="form-control" id="inputQuant6">
+    </div>
+    <div class="col-sm-2">
+    <input type="valor6" class="form-control" id="inputValor6" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+	<div class="col-sm-8">
+    <input type="item7" class="form-control" id="inputItem7">
+    </div>
+    <div class="col-sm-2">
+    <input type="quant7" class="form-control" id="inputQuant7">
+    </div>
+    <div class="col-sm-2">
+    <input type="valor7" class="form-control" id="inputValor7" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+	<div class="col-sm-8">
+    <input type="item8" class="form-control" id="inputItem8">
+    </div>
+    <div class="col-sm-2">
+    <input type="quant8" class="form-control" id="inputQuant8">
+    </div>
+    <div class="col-sm-2">
+    <input type="valor8" class="form-control" id="inputValor8" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+	<div class="col-sm-8">
+    <input type="item9" class="form-control" id="inputItem9">
+    </div>
+    <div class="col-sm-2">
+    <input type="quant9" class="form-control" id="inputQuant9">
+    </div>
+    <div class="col-sm-2">
+    <input type="valor9" class="form-control" id="inputValor9" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+	<div class="col-sm-8">
+    <input type="item10" class="form-control" id="inputItem10">
+    </div>
+    <div class="col-sm-2">
+    <input type="quant10" class="form-control" id="inputQuant10">
+    </div>
+    <div class="col-sm-2">
+    <input type="valor10" class="form-control" id="inputValor10" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+  </div>
+  </div><br>
+
+  <div class="text-center fs-1">Serviço</div><br><br>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-10">
+    <label for="inputDesc" class="form-label">Descrição</label>
+    <input type="desc" class="form-control" id="inputDesc">
+    </div>
+    <div class="col-sm-2">
+    <label for="inputValorServ" class="form-label">Valor</label>
+    <input type="valorserv" class="form-control" id="inputValorServ" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+    <input type="desc2" class="form-control" id="inputDesc2">
+    </div>
+    <div class="col-sm-2">
+    <input type="valorserv2" class="form-control" id="inputValorServ2" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+	<input type="desc3" class="form-control" id="inputDesc3">
+    </div>
+    <div class="col-sm-2">
+    <input type="valorserv3" class="form-control" id="inputValorServ3" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+	<input type="desc4" class="form-control" id="inputDesc4">
+    </div>
+    <div class="col-sm-2">
+    <input type="text" class="form-control" id="inputValorServ4" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+	<input type="desc5" class="form-control" id="inputDesc5">
+    </div>
+    <div class="col-sm-2">
+    <input type="text" class="form-control" id="inputValorServ5" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+  </div>
+  </div>
+        <p>Resultado: <span id="inputValorTotal"></span></p>
+  <div class="container">
+  <div class="row">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="col-sm-8">
+  </div>
+  <div class="col-sm-2">
+    <h3>Valor Total</h3>
+  </div>
+  <div class="col-sm-2">
+    <input type="valortotal" class="form-control" id="inputValorTotal" onKeyUp="mascaraMoeda(this, event)"  value="">
+  </div>
+  </div>
+  </div><br>
+
+  <div class="mb-3">
+  <label for="observacoes" class="form-label">Observações</label>
+  <textarea class="form-control" id="observacoes" rows="3"></textarea>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <button type="button" class="btn btn-primary" onclick="soma()">Somar</button>
+  </div>
+
+  </form>
+  </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script type="text/javascript" src="valida.js" defer></script>
+    <script>
+      function soma() {
+  var input1 = document.getElementById("inputValorServ4").value;
+  var input2 = document.getElementById("inputValorServ5").value;
+  var n1 = parseFloat(input1.replace(',', '.'));
+  var n2 = parseFloat(input2.replace(',', '.'));
+  var resultado = n1 + n2;
+
+  document.getElementById("inputValorTotal").innerHTML = "O resultado da soma é: " + resultado.toFixed(2);
+}
+    </script>
+  </body>
+</html>
