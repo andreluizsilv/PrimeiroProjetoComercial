@@ -7,7 +7,7 @@ Cadastro Cliente
 {% block content %}
         <div class="conteiner">
             <div class="text-center fs-1">Cadastro Cliente</div>
-                {% for cliente in clientes_cadastrado %}
+                {% for cliente in object_list %}
                 <div class="input-group input-group-sm mb-4">
                 <div class="input-group-prepend">
                    <label for="inputNome" class="form-label">Nome</label>
