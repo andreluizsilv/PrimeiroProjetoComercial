@@ -17,5 +17,5 @@ class Homepage(TemplateView):
 #    return render(request, "homecadastro.html", context)
 
 class Homecadastro(ListView):
-    template_name = "homecadastro.html"
+    template_name = "clientecadastrado.html"
     model = Cliente

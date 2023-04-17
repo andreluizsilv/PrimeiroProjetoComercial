@@ -93,5 +93,92 @@ Cadastro
     <label for="inputKm" class="form-label">Km</label>
     <input type="text" class="form-control" id="inputKm" required>
   </div>
+
+      <div class="text-center fs-1">Serviço</div><br><br>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-10">
+    <label for="inputDesc" class="form-label">Descrição</label>
+    <input type="desc" class="form-control" id="inputDesc">
+    </div>
+    <div class="col-sm-2">
+    <label for="inputValorServ" class="form-label">Valor</label>
+    <input type="valorserv" class="form-control" id="inputValorServ" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+    <input type="desc2" class="form-control" id="inputDesc2">
+    </div>
+    <div class="col-sm-2">
+    <input type="valorserv2" class="form-control" id="inputValorServ2" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+	<input type="desc3" class="form-control" id="inputDesc3">
+    </div>
+    <div class="col-sm-2">
+    <input type="valorserv3" class="form-control" id="inputValorServ3" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+	<input type="desc4" class="form-control" id="inputDesc4">
+    </div>
+    <div class="col-sm-2">
+    <input type="text" class="form-control" id="inputValorServ4" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+	<input type="desc5" class="form-control" id="inputDesc5">
+    </div>
+    <div class="col-sm-2">
+    <input type="text" class="form-control" id="inputValorServ5" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+    <input type="desc2" class="form-control" id="inputDesc2">
+    </div>
+    <div class="col-sm-2">
+    <input type="valorserv2" class="form-control" id="inputValorServ2" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+	<input type="desc3" class="form-control" id="inputDesc3">
+    </div>
+    <div class="col-sm-2">
+    <input type="valorserv3" class="form-control" id="inputValorServ3" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+	<input type="desc4" class="form-control" id="inputDesc4">
+    </div>
+    <div class="col-sm-2">
+    <input type="text" class="form-control" id="inputValorServ4" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+    <div class="col-sm-10">
+	<input type="desc5" class="form-control" id="inputDesc5">
+    </div>
+    <div class="col-sm-2">
+    <input type="text" class="form-control" id="inputValorServ5" onKeyUp="mascaraMoeda(this, event)"  value="">
+    </div>
+  </div>
+  </div>
+        <p>Resultado: <span id="inputValorTotal"></span></p>
+  <div class="container">
+  <div class="row">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="col-sm-8">
+  </div>
+  <div class="col-sm-2">
+    <h3>Valor Total</h3>
+  </div>
+  <div class="col-sm-2">
+    <input type="valortotal" class="form-control" id="inputValorTotal" onKeyUp="mascaraMoeda(this, event)"  value="">
+  </div>
+  </div>
+  </div><br>
+
+  <div class="mb-3">
+  <label for="observacoes" class="form-label">Observações</label>
+  <textarea class="form-control" id="observacoes" rows="3"></textarea>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <button type="button" class="btn btn-primary" onclick="soma()">Somar</button>
+  </div>
 </header>
 {% endblock %}
